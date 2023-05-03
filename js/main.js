@@ -26,22 +26,18 @@ const images = [
 
 // creiamo un ciclo che ci permette di inserire i nostri oggetti in pagina
 
-// for (let i = 0; i < images.length; i++) {
-//     const card = images[i];
-//     console.log(card);
-
-//     const cardBox = document.getElementById("imageBox");
-//     const imgTag = `<img src ="./${card.image}" />`;
-//     console.log(imgTag);
-
-//     if(i==0){
-//         imgTag.classList.add("visible")
-//     }
+for (let i = 0; i < images.length; i++) {
+    const cardMiniatures = images[i];
     
-//     cardBox.innerHTML += (imgTag);
+
+    const miniatureBox = document.getElementById("miniatureBox");
+    const imgTag = `<img class = "miniatures" src ="./${cardMiniatures.image}" />`;
+    
+    
+    miniatureBox.innerHTML += (imgTag);
 
     
-// }
+}
 
 const cardBox = document.getElementById("imageBox");
 
@@ -86,7 +82,9 @@ btnNext.addEventListener("click",function(){
     if(currentImgIndex < 5){
         for (let i = 0; i < selectImg.length; i++) {
             const slide = selectImg[i];
+            console.log(slide);
             const imgDescr = divElem[i];
+            console.log(imgDescr);
     
             if(i== currentImgIndex){
                 slide.classList.add("visible");

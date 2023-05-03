@@ -82,6 +82,10 @@ body{
     height: 100%;
 }
 
+#miniatureBox > img{
+    display: block;
+}
+
 .miniatures{
     height: calc(100% / 5);
 }
