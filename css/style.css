@@ -54,7 +54,7 @@
     height: calc(100% / 5);
 }
 
-.imgFit{
+img{
     height: 100%;
     width: 100%;
     object-fit: cover;

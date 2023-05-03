@@ -22,3 +22,18 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+
+// creiamo un ciclo che ci permette di inserire i nostri oggetti in pagina
+
+for (let i = 0; i < images.length; i++) {
+    const card = images[i];
+    console.log(card);
+
+    const cardBox = document.getElementById("imageBox");
+    const imgTag = `<img src ="./${card.image}" />`;
+    console.log(imgTag);
+    cardBox.innerHTML = (imgTag);
+
+    
+}
