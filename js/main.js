@@ -69,3 +69,68 @@ for (i = 0; i < images.length; i++){
  
    
 }
+
+const selectImg = document.getElementsByTagName("img")
+
+const divElem = cardBox.getElementsByTagName("div");
+
+let currentImgIndex = 0;
+
+/******* EVENTI **********/
+
+
+// creiamo un eventlistener che al click del bottone next cambia immagine
+const btnNext = document.querySelector(".btnNext");
+
+btnNext.addEventListener("click",function(){
+    if(currentImgIndex < 5){
+        for (let i = 0; i < selectImg.length; i++) {
+            const slide = selectImg[i];
+            const imgDescr = divElem[i];
+    
+            if(i== currentImgIndex){
+                slide.classList.add("visible");
+                imgDescr.classList.add("visible","position");
+            }else{
+                slide.classList.remove("visible");
+                imgDescr.classList.remove("visible","position");
+            }
+    
+            
+        }
+
+        currentImgIndex++;
+    }else{
+        currentImgIndex = 0;
+    }
+    
+})
+
+
+
+
+const btnPrev = document.querySelector(".btnPrev");
+
+btnPrev.addEventListener("click",function(){
+    if(currentImgIndex > 0){
+        for (let i = 0; i < selectImg.length; i++) {
+            const slide = selectImg[i];
+            const imgDescr = divElem[i];
+    
+            if(i== currentImgIndex -1){
+                slide.classList.add("visible");
+                imgDescr.classList.add("visible","position");
+            }else{
+                slide.classList.remove("visible");
+                imgDescr.classList.remove("visible","position");
+            }
+    
+            
+        }
+
+        currentImgIndex--;
+    }else{
+        currentImgIndex = 5;
+    }
+    
+})
