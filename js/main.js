@@ -26,14 +26,36 @@ const images = [
 
 // creiamo un ciclo che ci permette di inserire i nostri oggetti in pagina
 
-for (let i = 0; i < images.length; i++) {
-    const card = images[i];
-    console.log(card);
+// for (let i = 0; i < images.length; i++) {
+//     const card = images[i];
+//     console.log(card);
 
-    const cardBox = document.getElementById("imageBox");
-    const imgTag = `<img src ="./${card.image}" />`;
-    console.log(imgTag);
-    cardBox.innerHTML = (imgTag);
+//     const cardBox = document.getElementById("imageBox");
+//     const imgTag = `<img src ="./${card.image}" />`;
+//     console.log(imgTag);
+
+//     if(i==0){
+//         imgTag.classList.add("visible")
+//     }
+    
+//     cardBox.innerHTML += (imgTag);
 
     
+// }
+
+const cardBox = document.getElementById("imageBox");
+
+for (i = 0; i < images.length; i++){
+    const cards = images[i];
+    const imgTag = document.createElement("img");
+    imgTag.src = cards.image;
+
+    if(i === 0){
+        imgTag.classList.add("visible")
+    }
+    
+    cardBox.append(imgTag);
+
+ 
+   
 }
