@@ -50,11 +50,21 @@ for (i = 0; i < images.length; i++){
     const imgTag = document.createElement("img");
     imgTag.src = cards.image;
 
+    const divTag = document.createElement("div");
+    const titleElement = `<h2>${cards.title}</h2>`;
+    const pElement = `<p>${cards.text}</p>`;
+
+    divTag.innerHTML += titleElement + pElement;
+
+
+
     if(i === 0){
-        imgTag.classList.add("visible")
+        imgTag.classList.add("visible");
+        divTag.classList.add("visible", "position");
     }
     
     cardBox.append(imgTag);
+    cardBox.append(divTag);
 
  
    

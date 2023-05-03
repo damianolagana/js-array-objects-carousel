@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+body{
+    color: white;
+    font-family: sans-serif;
+}
+
 #container{
     height: 100vh;
     display: flex;
@@ -42,14 +47,33 @@
 #imageBox{
     flex-grow: 1;
     height: 100%;
+    position: relative;
 }
 
-#imageBox > img{
+#imageBox > img {
     display: none;
 }
 
+#imageBox div{
+    display: none;
+}
+
+#imageBox > div.visible{
+    display: block;
+}
+
+
+
 #imageBox > img.visible{
     display: block;
+}
+
+
+.position{
+    position: absolute;
+    bottom: 4rem;
+    right: 2rem;
+    text-align: end;
 }
 
 #miniatureBox{
