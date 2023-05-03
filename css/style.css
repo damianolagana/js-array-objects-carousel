@@ -16,6 +16,7 @@
     height: 70vh;
     width: 70vw;
     background-color: aqua;
+    display: flex;
 }
 
 .carouselBtn{
@@ -36,4 +37,25 @@
 
 .btnPrev{
     top:1rem ;
+}
+
+#imageBox{
+    flex-grow: 1;
+    height: 100%;
+}
+
+#miniatureBox{
+    width: 20%;
+    background-color: coral;
+    height: 100%;
+}
+
+.miniatures{
+    height: calc(100% / 5);
+}
+
+.imgFit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
